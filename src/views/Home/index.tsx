@@ -3,6 +3,7 @@ import useTheme from "hooks/useTheme";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import { Button } from "components/Button";
+import { types } from "contexts/ThemeContext/type";
 
 const Page = styled.div`
   background-color: ${(props) => props.theme.colors.background};
@@ -31,7 +32,7 @@ const Text = styled.div`
 // `;
 
 function Home() {
-  const { toggleTheme } = useTheme();
+  const { changeTheme } = useTheme();
   const { t, i18n } = useTranslation();
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
@@ -42,7 +43,8 @@ function Home() {
       <Page>
         <Text>{t("title")}</Text>
         <Text></Text>
-        <Button onClick={() => toggleTheme()} scale={"md"}>{t("button.switchTheme")}</Button>
+        <Button onClick={() => changeTheme(types.DARK)} scale={"md"}>{t("DARK")}</Button>
+        <Button onClick={() => changeTheme(types.LIGHT)} scale={"md"}>{t("LIGHT")}</Button>
         <Button onClick={() => changeLanguage("en")}>EN</Button>
         <Button onClick={() => changeLanguage("th")}>TH</Button>
       </Page>

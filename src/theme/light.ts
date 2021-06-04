@@ -5,7 +5,6 @@ import { lightColors } from "./colors";
 
 const lightTheme: DefaultTheme = {
   ...base,
-  isDark: false,
   colors: lightColors,
 };
 

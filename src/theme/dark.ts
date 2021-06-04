@@ -5,7 +5,6 @@ import { darkColors } from "./colors";
 
 const darkTheme: DefaultTheme = {
   ...base,
-  isDark: true,
   colors: darkColors,
 };
 

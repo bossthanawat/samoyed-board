@@ -20,14 +20,7 @@ const Text = styled(SyText)`
   justify-content: center;
 `;
 
-// const ButtonToggleTheme = styled.button`
-//   text-align: center;
-//   color: ${(props) => props.theme.colors.text};
-//   background-color: ${(props) => props.theme.colors.primary};
-//   justify-content: center;
-// `;
-
-function Home() {
+function First() {
   const { changeTheme } = useTheme();
   const { t, i18n } = useTranslation();
   const changeLanguage = (language) => {
@@ -48,4 +41,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default First;
